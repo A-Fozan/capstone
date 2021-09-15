@@ -87,7 +87,7 @@ Errors are returned as JSON objects in the following format:
 The API will return the following errors based on how the request fails:
  - 401: Unauthorized
  - 403: Forbidden
- - 404: resource not found
+ - 404: resource not found (note:if the database is empty it returns 404)
  - 422: Unprocessable
 
 ## Endpoints
