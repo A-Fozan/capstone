@@ -41,6 +41,7 @@ To run the server, execute:
 ```bash
 export DATABASE_URL2=<database-connection-url>
 export FLASK_APP=app.py
+bash setup.sh
 flask run --reload
 ```
 
@@ -87,7 +88,7 @@ Errors are returned as JSON objects in the following format:
 The API will return the following errors based on how the request fails:
  - 401: Unauthorized
  - 403: Forbidden
- - 404: resource not found (note:if the database is empty it returns 404)
+ - 404: resource not found
  - 422: Unprocessable
 
 ## Endpoints

@@ -21,9 +21,6 @@ def create_app(test_config=None):
 
     all_wizards = db.session.query(Wizard).all()
 
-    if all_wizards is None or all_wizards == []:
-      abort(404)
-
     list_of_wizards = []
     for wizard in all_wizards:
       w = wizard.format()
@@ -44,9 +41,6 @@ def create_app(test_config=None):
   def get_potions():
 
     all_potions = db.session.query(Potion).all()
-
-    if all_potions is None or all_potions == []:
-      abort(404)
 
     list_of_potions = []
     for potion in all_potions:

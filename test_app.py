@@ -67,11 +67,6 @@ class CaptoneTestCase(unittest.TestCase):
         db.session.query(Potion).delete()
         db.session.commit()
 
-            
-    def test_error_404_wizards(self):
-        resp = self.client().get('/wizards')
-        self.assertEqual(resp.status_code, 404)
-    
     def test_wizards(self):
         db.session.add(self.W1)
         db.session.commit()
@@ -89,10 +84,6 @@ class CaptoneTestCase(unittest.TestCase):
 
         self.assertEqual(resp.status_code, 200)
 
-    def test_error_404_potions(self):
-        resp = self.client().get('/potions')
-
-        self.assertEqual(resp.status_code, 404)
 
     def test_add_wizard(self): 
         resp = self.client().post('/wizard/add',json=self.W2, headers={

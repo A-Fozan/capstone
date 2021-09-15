@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 import os
 
 
-database_path = os.environ['DATABASE_URL']
+database_path = os.environ["DATABASE_URL2"]
 #database_path = 'postgresql://@localhost:5432/capstone'
 
 
