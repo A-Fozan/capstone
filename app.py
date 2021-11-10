@@ -10,7 +10,10 @@ def create_app(test_config=None):
   app = Flask(__name__)
   setup_db(app)
   CORS(app)
-
+  
+  @app.route('/')
+  def welcome():
+    return "welcome to the potion wizard market!!"
 
   """
    this endpoint returns all wizards that are in the database
